@@ -68,6 +68,10 @@ app.get("/edit",(req,res)=>{
   console.log("edit")
   res.render("edit")
 })
+app.get("/home",(req,res)=>{
+  console.log("home")
+  res.render("home")
+})
 app.listen(8080,()=>{
   console.log("Listening");
 })

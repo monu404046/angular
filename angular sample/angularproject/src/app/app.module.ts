@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { RouterModule, Routes} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
@@ -18,6 +18,9 @@ import { DataComponent } from './data/data.component';
 import { CalcService } from './calc.service';
 import { MessageService } from './message.service';
 import { EditComponent } from './edit/edit.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { EditComponent } from './edit/edit.component';
     AboutComponent,
     HeaderComponent,
     DataComponent,
-    EditComponent
+    EditComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

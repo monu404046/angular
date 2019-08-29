@@ -1,7 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { MessageService } from '../message.service';
-import { Inject, Injectable } from '@angular/core';
-import{LOCAL_STORAGE,StorageServiceModule} from 'angular-webstorage-service';
+
 import{Router} from '@angular/router'
 
 @Component({
@@ -11,11 +10,12 @@ import{Router} from '@angular/router'
 })
 export class ViewproductComponent implements OnInit {
 
-  constructor(@Inject(LOCAL_STORAGE) private ms: MessageService) { }       //,private ms: MessageService
+  constructor(private ms: MessageService) { }       //,private ms: MessageService
 
   sdata;
   ngOnInit() {
   this.ms.getData().subscribe(data=>{
+    console.log(data)
     this.sdata = data;
     })
   }
